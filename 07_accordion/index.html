@@ -14,7 +14,7 @@
     <h1>accordion</h1>
     
     <div class="accordion">
-      <h2 class="active">This is title 01</h2>
+      <h2>This is title 01</h2>
       <p class="content">Lorem ipsum dolor, sit amet consectetur
         adipisicing elit. Esse numquam repudiandae odit ullam, doloribus
         illo? Reprehenderit facere consectetur ducimus dignissimos aspernatur.
@@ -38,7 +38,31 @@
   </div>
 
   <script>
-   
+  //   아코디언 1
+  //  var title = $('.accordion h2')
+  //  title.eq(0).addClass('active').next().slideDown()
+
+  //  title.click(function() {
+  //    $(this).toggleClass('active')
+  //    $(this).next().slideToggle()
+  //  })
+
+  // 아코디언2
+    var title = $('.accordion h2')
+    title.eq(0).addClass('active').next().slideDown()
+
+    title.click(function() {
+      var content = $(this).next()
+
+      $(this).parent('.accordion').find('p').not(content).slideUp()
+      content.slideToggle()
+
+      if($(this).hasClass('active')) {
+        $(this).removeClass('active')
+      } else {
+        $(this).addClass('active')
+      }
+    })
   </script>
 </body>
 </html>

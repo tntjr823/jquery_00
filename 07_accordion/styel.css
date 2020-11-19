@@ -44,12 +44,12 @@ h2::after {
   height: 10px;
   border-right: 2px solid #ddd;
   border-bottom: 2px solid #ddd;
-  transform: rotate(45deg);
+  transform: rotate(-45deg);
   transition: all 0.2s;
 }
 
 h2.active::after {
-  transform: rotate(-45deg);
+  transform: rotate(45deg);
 }
 
 .content {
